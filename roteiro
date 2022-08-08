@@ -1,0 +1,36 @@
+react-native init Devfit --version 0.68.2
+
+npm install @react-navigation/native
+npm install react-native-screens react-native-safe-area-context
+npm install react-native-gesture-handler --force
+npm install react-navigation-stack react-navigation-tabs --force
+npm install react-native-swipe-list-view --force
+npm  install redux react-redux redux-persist --force
+npm install styled-components --force
+npm install uuid --force
+npm install @react-native-community/async-storage --force
+
+
+Config Android:
+
+-Android/app/build.gradle
+colocar em dependencies:
+
+implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
+
+-Android/app/src/java/MainActivity.java
+
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+
+La embaixo dentro da classe:
+
+@Override
+  protected ReactActivityDelegate createReactActivityDelegate() {
+    return new ReactActivityDelegate(this, getMainComponentName()) {
+      @Override
+      protected ReactRootView createRootView() {
+        return new RNGestureHandlerEnabledRootView(MainActivity.this);
+      }
+    };
+  }

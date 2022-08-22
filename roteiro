@@ -3,13 +3,16 @@ react-native init Devfit --version 0.68.2
 npm install @react-navigation/native
 npm install react-native-screens react-native-safe-area-context
 npm install react-native-gesture-handler --force
-npm install react-navigation-stack react-navigation-tabs --force
+npm install @react-navigation/bottom-tabs --force
+npm install @react-navigation/stack --force
 npm install react-native-swipe-list-view --force
 npm  install redux react-redux redux-persist --force
 npm install styled-components --force
 npm install uuid --force
 npm install @react-native-community/async-storage --force
-
+npm install react-native-swipe-list-view --force
+npm  install @react-native-picker/picker  --force
+npm install react-native-get-random-values --force
 
 Config Android:
 

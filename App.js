@@ -5,6 +5,8 @@ import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/es/integration/react';
 import {store, persistor} from './src/store';
 import MainStack from './src/navigators/MainStack';
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Sending']);
 
 //importar stack
 

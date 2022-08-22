@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import {useNavigation} from '@react-navigation/native';
 import styled from 'styled-components/native';
 import DefaultButton from '../components/DefaultButton';
@@ -40,7 +40,10 @@ const ButtonText = styled.Text`
 
 export default () => {
     const navigation = useNavigation()
-    navigation.setOptions({headerShown:false})
+
+    useLayoutEffect(()=>{
+        navigation.setOptions({headerShown:false})
+    },[])
 
     const start = () => {
         navigation.navigate('StarterName')

@@ -51,6 +51,13 @@ export default (props) => {
     const setNavigate = (routeName)=> {
         navigation.navigate(routeName)
     }
+    const state = props.state
+    const descriptors = props.descriptors
+    const focusedOptions = descriptors[state.routes[state.index].key].options;
+    if (focusedOptions?.tabBarStyle?.display === "none") {
+      return null;
+    }
+    //metodo para n aparceer a tab bar em determinada screen com custom tab bar
     return(
         <TabBarArea>
             {props.items.map(item=>(

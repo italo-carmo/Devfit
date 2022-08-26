@@ -37,7 +37,6 @@ const DayText = styled.Text`
 `
 
 const Day = ({day, month, dailyProgress, workoutDays, onPress, dayW}) =>{
-    console.log(dailyProgress)
     let bgColor = "#f4f4f4";
     var opacity = 1;
     let today = new Date()

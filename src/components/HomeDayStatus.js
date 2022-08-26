@@ -83,7 +83,7 @@ export default ({month, day, dailyProgress, workoutDays}) => {
     }
 
     const handleIr = () => {
-        navigation.navigate('')
+        navigation.navigate('WorkoutStack')
     }
 
     const setDone = () => {

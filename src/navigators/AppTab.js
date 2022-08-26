@@ -34,7 +34,7 @@ export default () => {
             />
         )}  screenOptions={{headerShown:false}}>
             <Tab.Screen name="HomeStack" component={HomeStack}/>
-            <Tab.Screen name="WorkoutStack" component={WorkoutStack} />
+            <Tab.Screen name="WorkoutStack" component={WorkoutStack} options={{tabBarStyle:{display: 'none'}}}/>
             <Tab.Screen name="MyWorkoutStack" component={MyWorkoutStack} />
       </Tab.Navigator>
     )

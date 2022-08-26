@@ -1,5 +1,6 @@
 import {createStackNavigator} from '@react-navigation/stack';
-import MyWorkoutScreen from '../screens/MyWorkoutScreen'
+import WorkoutSelect from '../screens/WorkoutSelect'
+import WorkoutChecklist from '../screens/WorkoutChecklist'
 
 const WorkoutStack = createStackNavigator()
 
@@ -7,6 +8,7 @@ const WorkoutStack = createStackNavigator()
 
 export default () => (
     <WorkoutStack.Navigator screenOptions={{cardStyle: { backgroundColor: '#fff' }}}>
-        <WorkoutStack.Screen name="My Workout" component={MyWorkoutScreen}/>
+        <WorkoutStack.Screen name="WorkoutSelect" component={WorkoutSelect}/>
+        <WorkoutStack.Screen name="WorkoutCheckList" component={WorkoutChecklist}/>
     </WorkoutStack.Navigator>
 )

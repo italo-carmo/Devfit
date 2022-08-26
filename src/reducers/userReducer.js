@@ -57,6 +57,27 @@ export default (state=initialState, action) => {
             return {...state, dailyProgress}
         break;
 
+        case 'ADD_LAST_WORKOUT':
+            let lastWorkout = action.payload.lastWorkout
+            return {...state, lastWorkout}
+        break;
+        
+        case 'UPDATE_ACTUAL_LOAD':
+            let new_loads = action.payload.actualLoad
+            let workoutId = action.payload.workoutId
+            let exerciseId = action.payload.exerciseId
+            let workoutindex = myWorkouts.findIndex(i=>i.id==workoutId)
+            if (workoutindex > -1) {
+                let exercises = myWorkouts[workoutindex].exercises
+                let new_index = exercises.findIndex(t=>t.id==exerciseId)
+
+                if(new_index > -1) {
+                    myWorkouts[workoutindex].exercises[new_index].actualLoad = new_loads
+                }
+            }
+            return {...state, myWorkouts}
+        break;
+
         case 'RESET':
             state = initialState
             return {...state}
